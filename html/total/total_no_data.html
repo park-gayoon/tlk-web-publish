@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_sch-area type2">
+                    <span class="sel big">
+                        <select>
+                            <option selected="selected">주문번호</option>
+                            <option>패키징번호</option>
+                        </select>
+                    </span>
+                    <input type="text" placeholder="Search...">
+                    <button type="button" class="btn_search"><i class="ico_com"></i>검색</button>
+                </div>
+
+                <!-- tab -->
+                <div class="contents_box">
+                    <div class="tab_type type2">
+                        <ul>
+                            <li><button type="button" class="tab01 active" title="tab01">주문번호<span>0</span></button></li>
+                            <li><button type="button" class="tab02" title="tab02">패키징번호<span>10</span></button></li>
+                        </ul>
+                    </div>
+                    <!-- S : 주문번호 tab -->
+                    <div class="tab_view-box block" id="tab01">
+                        <div class="bbs_area">
+                            <div class="bbs_header">
+                                <div class="bbs_list">
+                                    <p class="total">주문번호 검색 결과</p>
+                                </div>
+                            </div>
+                            <!-- bbs -->
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:9%">
+                                    <col style="width:13%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:9%">
+                                    <col style="width:8%">
+                                    <col style="width:14%">
+                                    <col style="width:8%">
+                                    <col style="width:8%">
+                                    <col style="width:12%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>주문처</th>
+                                    <th>주문일시</th>
+                                    <th>주문번호</th>
+                                    <th>패키징NO</th>
+                                    <th>고객명</th>
+                                    <th>주문유형</th>
+                                    <th>주문상품</th>
+                                    <th>배송상태</th>
+                                    <th>완료온도</th>
+                                    <th>상세보기</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td colspan="10" class="no-data">조회결과가 없습니다.</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page">6</button>
+                                <button type="button" class="btn_page">7</button>
+                                <button type="button" class="btn_page">8</button>
+                                <button type="button" class="btn_page">9</button>
+                                <button type="button" class="btn_page">10</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E : 주문번호 tab -->
+                    <!-- S : 패키징번호 tab -->
+                    <div class="tab_view-box" id="tab02">
+                        <div class="bbs_area">
+                            <div class="bbs_header">
+                                <div class="bbs_list">
+                                    <p class="total">패키징 검색 결과</p>
+                                </div>
+                            </div>
+                            <!-- bbs -->
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:9%">
+                                    <col style="width:10%">
+                                    <col style="width:6%">
+                                    <col style="width:14%">
+                                    <col style="width:7%">
+                                    <col style="width:15%">
+                                    <col style="width:8%">
+                                    <col style="width:8%">
+                                    <col style="width:8%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>패키징번호</th>
+                                    <th>종류</th>
+                                    <th>Mac Add</th>
+                                    <th>상태</th>
+                                    <th>등록일자</th>
+                                    <th>담당자</th>
+                                    <th>등록기기</th>
+                                    <th>사용여부</th>
+                                    <th>총 사용회수</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>패키징</td>
+                                    <td class="link"><a href="">010158</a></td>
+                                    <td>1호</td>
+                                    <td>DKDHWEIYYRN1</td>
+                                    <td>정상</td>
+                                    <td>2020-08-13  19:00:24</td>
+                                    <td>홍길동</td>
+                                    <td>APP</td>
+                                    <td>입고</td>
+                                    <td>82</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page">6</button>
+                                <button type="button" class="btn_page">7</button>
+                                <button type="button" class="btn_page">8</button>
+                                <button type="button" class="btn_page">9</button>
+                                <button type="button" class="btn_page">10</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E : 패키징번호 tab -->
+                </div>
+                <!-- //tab -->
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

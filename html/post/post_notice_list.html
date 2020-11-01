@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="layout_wrap">
+            <!-- S : gnb Menu -->
+            <script src="../include/gnb_menu.js"></script>
+            <!-- E : gnb Menu -->
+            <section class="layout_contents">
+                <!-- S : content header -->
+                <script src="../include/content_hd.js"></script>
+                <!-- E : content header -->
+                <div class="layout_contents-inner">
+                    <div class="box_bread_crumb">
+                        <h2 class="tit_type1">APP공지관리</h2>
+                        <ul class="bread_crumb">
+                            <li>게시물관리 &gt;</li>
+                            <li>APP공지관리</li>
+                        </ul>
+                    </div>
+                    <article class="bbs_form-content">
+                        <table class="search_table">
+                            <colgroup>
+                                <col style="width:8%">
+                                <col style="width:42%">
+                                <col style="width:8%">
+                                <col style="width:41%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>구분</th>
+                                    <td colspan="3"> <!-- 2020-10-16 colspan 수정 -->
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType100" checked>
+                                            <label for="termType100">오퍼레이터 APP</label>
+                                        </span>
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType101">
+                                            <label for="termType101">딜리버리 APP</label>
+                                        </span>
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType102">
+                                            <label for="termType102">고객 APP</label>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>공개여부</th>
+                                    <td>
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>공개</option>
+                                                <option>비공개</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                    <th>검색</th>
+                                    <td>
+                                        <div class="box_sch-area type1">
+                                            <span class="sel">
+                                                <select>
+                                                    <option selected="selected">제목명</option>
+                                                    <option>작성자</option>
+                                                </select>
+                                            </span>
+                                            <input type="text" class="big" value="">
+                                        </div>
+                                        <button type="button" class="btn_basic1">조회</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="total">게시물 <span class="point-color01">128</span>개 (오퍼레이터 : <span class="point-color01">32</span>건
+                                    <em class="txt_division-area">딜리버리 : <span class="point-color01">42</span>건</em>
+                                    <em class="txt_division-area">고객 : <span class="point-color01">43</span>건</em>)
+                                </p>
+                            </div>
+                            <div class="bbs_right">
+                                <button type="button" class="btn_basic3 type1"><span class="ico_plus"></span>게시물 등록하기</button>
+                            </div>
+                        </div>
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <colgroup>  <!-- 2020-10-29 colgroup 변경 -->
+                                <col style="width:6%">
+                                <col style="width:6%">
+                                <col style="width:12%">
+                                <col style="width:22%">
+                                <col style="width:8%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:13%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="all">
+                                            <label for="all">전체선택</label>
+                                        </span>
+                                    </th>
+                                    <th>번호</th>
+                                    <th>구분</th>
+                                    <th>제목</th>
+                                    <th>공개</th>
+                                    <th>작성자</th>
+                                    <th>작성일자</th>
+                                    <th>조회수</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="is-active">
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk01" checked>
+                                            <label for="chk01">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>공지</td>
+                                    <td>오퍼레이터APP</td>
+                                    <td class="link type2"><a href="" title="상세페이지로 이동">글이 길 경우 말줄임이 됩니다람쥐마켓 글이 길 경우 말줄임이 됩니다람쥐마켓</a></td>
+                                    <td>공개</td>
+                                    <td>neotady3</td>
+                                    <td>2020-08-09</td>
+                                    <td>2,135</td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button type="button" class="btn_basic9 xsmall type1">수정</button>
+                                            <button type="button" class="btn_basic10 xsmall type1">삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk02">
+                                            <label for="chk02">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>123</td>
+                                    <td>오퍼레이터APP</td>
+                                    <td class="link type2"><a href="" title="상세페이지로 이동">게시물 제목이 들어가는 영역입니다.</a></td>
+                                    <td>공개</td>
+                                    <td>neotady3</td>
+                                    <td>2020-08-09</td>
+                                    <td>2,135</td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button type="button" class="btn_basic9 xsmall type1">수정</button>
+                                            <button type="button" class="btn_basic10 xsmall type1">삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk03">
+                                            <label for="chk03">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>124</td>
+                                    <td>오퍼레이터APP</td>
+                                    <td class="link type2"><a href="" title="상세페이지로 이동">게시물 제목이 들어가는 영역입니다.</a></td>
+                                    <td>공개</td>
+                                    <td>neotady3</td>
+                                    <td>2020-08-09</td>
+                                    <td>2,135</td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button type="button" class="btn_basic9 xsmall type1">수정</button>
+                                            <button type="button" class="btn_basic10 xsmall type1">삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="box_bbs-footer">
+                            <!-- 버튼 영역 -->
+                            <button type="button" class="btn_basic3 type1 align-l">삭제</button>
+                        </div>
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <button type="button" class="btn_page prev">이전</button>
+                            <button type="button" class="btn_page active">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                            <button type="button" class="btn_page next">다음</button>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</body>
+</html>

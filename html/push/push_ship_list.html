@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="layout_wrap">
+            <!-- S :gnb Menu -->
+            <script src="../include/gnb_menu.js"></script>
+            <!-- E :gnb Menu -->
+            <section class="layout_contents">
+                <!-- S :content header -->
+                <script src="../include/content_hd.js"></script>
+                <!-- E :content header -->
+                <div class="layout_contents-inner">
+                    <div class="box_bread_crumb">
+                        <h2 class="tit_type1">발송관리</h2>
+                        <ul class="bread_crumb">
+                            <li>PUSH관리 &gt;</li>
+                            <li>발송관리</li>
+                        </ul>
+                    </div>
+                    <article class="bbs_form-content">
+                        <table class="search_table">
+                            <colgroup>
+                                <col style="width:9%">
+                                <col style="width:42%">
+                                <col style="width:7%">
+                                <col style="width:42%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>대상구분</th>
+                                    <td>
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType100" checked>
+                                            <label for="termType100">사용자</label>
+                                        </span>
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType101">
+                                            <label for="termType101">배송기사</label>
+                                        </span>
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType102">
+                                            <label for="termType102">회수기사</label>
+                                        </span>
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType103">
+                                            <label for="termType103">오퍼레이터</label>
+                                        </span>
+                                    </td>
+                                    <th>기기구분</th>
+                                    <td>
+                                         <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType2">
+                                            <label for="termType2">iOS</label>
+                                        </span>
+                                        <span class="checkbox1">
+                                            <input type="checkbox" name="" id="termType3">
+                                            <label for="termType3">Android</label>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>발송구분</th>
+                                    <td>
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>예약발송</option>
+                                                <option>즉시발송</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                    <th>검색</th>
+                                    <td>
+                                        <div class="box_sch-area type1">
+                                            <span class="sel">
+                                                <select>
+                                                    <option selected="selected">제목명</option>
+                                                    <option>작성자</option>
+                                                </select>
+                                            </span>
+                                            <input type="text" class="big" value="">
+                                        </div>
+                                        <button type="button" class="btn_basic1">조회</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="total">게시물 <span class="point-color01">128</span>개 (iOS :<span class="point-color01">62</span>건
+                                    <em class="txt_division-area">Android :<span class="point-color01">72</span>건</em>)
+                                </p>
+                            </div>
+                            <div class="bbs_right">
+                                <button type="button" class="btn_basic3 type1"><span class="ico_plus"></span>게시물 등록하기</button>
+                            </div>
+                        </div>
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <colgroup><!-- 2020-10-29 colgroup 변경 -->
+                                <col style="width:6%">
+                                <col style="width:7%">
+                                <col style="width:9%">
+                                <col style="width:9%">
+                                <col style="width:20%">
+                                <col style="width:10%">
+                                <col style="width:13%">
+                                <col style="width:15%">
+                                <col style="width:13%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="all">
+                                            <label for="all">전체선택</label>
+                                        </span>
+                                    </th>
+                                    <th>번호</th>
+                                    <th>대상구분</th>
+                                    <th>OS</th>
+                                    <th>제목</th>
+                                    <th>발송구분</th>
+                                    <th>발송시간</th>
+                                    <th>발송결과</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk01" checked>
+                                            <label for="chk01">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>128</td>
+                                    <td>사용자</td>
+                                    <td>
+                                        <span class="device_division android">Android</span><span class="device_division ios">iOs</span>
+                                    </td>
+                                    <td class="link type2"><a href="" title="상세페이지로 이동">게시물 제목이 들어가는 영역입니다.게시물 제목이 들어가는 영역입니다.</a></td>
+                                    <td>예약발송</td>
+                                    <td>2020-08-09 09:00</td>
+                                    <td><button type="button" class="btn_basic3 type1">발송 결과보기</button></td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button type="button" class="btn_basic9 xsmall type1">수정</button>
+                                            <button type="button" class="btn_basic10 xsmall type1">삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk02">
+                                            <label for="chk02">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>128</td>
+                                    <td>배송기사</td>
+                                    <td>
+                                        <span class="device_division android">Android</span><span class="device_division ios">iOs</span>
+                                    </td>
+                                    <td class="link type2"><a href="" title="상세페이지로 이동">게시물 제목이 들어가는 영역입니다.</a></td>
+                                    <td>즉시발송</td>
+                                    <td>2020-08-09 09:00</td>
+                                    <td><button type="button" class="btn_basic3 type1">발송 결과보기</button></td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button type="button" class="btn_basic9 xsmall type1">수정</button>
+                                            <button type="button" class="btn_basic10 xsmall type1">삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk03">
+                                            <label for="chk03">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>128</td>
+                                    <td>배송기사</td>
+                                    <td>
+                                        <span class="device_division android">Android</span>
+                                    </td>
+                                    <td class="link type2"><a href="" title="상세페이지로 이동">게시물 제목이 들어가는 영역입니다.</a></td>
+                                    <td>즉시발송</td>
+                                    <td>2020-08-09 09:00</td>
+                                    <td><button type="button" class="btn_basic3 type1">발송 결과보기</button></td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button type="button" class="btn_basic9 xsmall type1">수정</button>
+                                            <button type="button" class="btn_basic10 xsmall type1">삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk04">
+                                            <label for="chk04">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>128</td>
+                                    <td>배송기사</td>
+                                    <td>
+                                        <span class="device_division ios">iOs</span>
+                                    </td>
+                                    <td class="link type2"><a href="" title="상세페이지로 이동">게시물 제목이 들어가는 영역입니다.</a></td>
+                                    <td>즉시발송</td>
+                                    <td>2020-08-09 09:00</td>
+                                    <td><button type="button" class="btn_basic3 type1">발송 결과보기</button></td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button type="button" class="btn_basic9 xsmall type1">수정</button>
+                                            <button type="button" class="btn_basic10 xsmall type1">삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="box_bbs-footer">
+                            <!-- 버튼 영역 -->
+                            <button type="button" class="btn_basic3 type1 align-l">삭제</button>
+                        </div>
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <button type="button" class="btn_page prev">이전</button>
+                            <button type="button" class="btn_page active">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                            <button type="button" class="btn_page next">다음</button>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</body>
+</html>

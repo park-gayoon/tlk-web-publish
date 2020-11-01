@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+    <!-- 가윤과장님 확인용(vue-js-modal css) -->
+    <link rel="stylesheet" href="../../css/modal_style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="layout_wrap">
+            <!-- S :gnb Menu -->
+            <script src="../include/gnb_menu.js"></script>
+            <!-- E :gnb Menu -->
+            <section class="layout_contents">
+                <!-- S :content header -->
+                <script src="../include/content_hd.js"></script>
+                <!-- E :content header -->
+                <div class="layout_contents-inner">
+                    <div class="box_bread_crumb">
+                        <h2 class="tit_type1">발주정보현황</h2>
+                        <ul class="bread_crumb">
+                            <li>주문/배송관리 &gt;</li>
+                            <li>발주정보현황</li>
+                        </ul>
+                    </div>
+                    <article class="bbs_form-content">
+                        <table class="search_table">
+                            <colgroup>
+                                <col style="width:95px">
+                                <col style="width:38%">
+                                <col style="width:95px">
+                                <col style="width:46%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>주문처</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th>지역</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>온도</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>-1˚C</option>
+                                            <option>-1˚C</option>
+                                            <option disabled>-1˚C</option>
+                                            <option disabled>-1˚C</option>
+                                            <option disabled>-1˚C</option>
+                                            <option disabled>-1˚C</option>
+                                        </select>
+                                    </span>
+                                    <i class="txt_date-line type1">~</i>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th>배송상태</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주문일자</th>
+                                <td>
+                                    <div class="box_datepicker-area">
+                                        <span class="datepicker_box">
+                                            <input type="text" class="small" id="date01" name="" value="" placeholder="날짜선택" disabled>
+                                            <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                        </span>
+                                        <i class="txt_date-line">~</i>
+                                        <span class="datepicker_box">
+                                            <input type="text" class="small" id="date02" name="" value="" placeholder="날짜선택" disabled>
+                                            <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                        </span>
+                                    </div>
+                                </td>
+                                <th>검색</th>
+                                <td>
+                                    <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>패키징번호</option>
+                                                <option>맥 어드레스</option>
+                                            </select>
+                                        </span>
+                                        <input type="text" class="big" value="">
+                                    </div>
+                                    <button type="button" class="btn_basic1">조회</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="total">주문건수 총 <span class="point-color01">12,345</span>건</p>
+                            </div>
+                            <div class="bbs_right">
+                                <p class="total">배송상태 :배송대기 <span class="point-color01">124</span>건
+                                    <em class="txt_division-area">배송출발 <span class="point-color01">2,154</span>건</em>
+                                    <em class="txt_division-area">배송중 <span class="point-color01">1,587</span>건</em>
+                                    <em class="txt_division-area">배송완료 <span class="point-color01">587</span>건</em>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <colgroup>
+                                <col style="width:9%">
+                                <col style="width:13%">
+                                <col style="width:9%">
+                                <col style="width:9%">
+                                <col style="width:8%">
+                                <col style="width:7%">
+                                <col style="width:auto">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:12%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>주문처</th>
+                                <th>주문일시</th>
+                                <th>주문번호</th>
+                                <th>패키징번호</th>
+                                <th>고객명</th>
+                                <th>주문유형</th>
+                                <th>주문상품</th>
+                                <th>배송상태</th>
+                                <th>완료온도</th>
+                                <th>상세보기</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>MK12345</td>
+                                    <td>CP123456</td>
+                                    <td>이명빡</td>
+                                    <td>냉장</td>
+                                    <td class="link type2"><a href="" title="주문상품페이지로 이동">무농약 간편샐러드 6종 외2건 무농약 간편샐러드 6종 외2건</a></td>
+                                    <td>배송중</td>
+                                    <td>-1˚C</td>
+                                    <td><button type="button" class="btn_basic3 btn_modal">상세보기</button></td> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal] class add -->
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>-</td> <!-- D :송장번호가 있는 경우 주문번호 표시 안함 -->
+                                    <td>CP123456</td>
+                                    <td>순시리</td>
+                                    <td>냉장</td>
+                                    <td class="link type2"><a href="" title="주문상품페이지로 이동">무농약 간편샐러드 6종 외2건</a></td>
+                                    <td>배송중</td>
+                                    <td>-1˚C</td>
+                                    <td><button type="button" class="btn_basic3 btn_modal">상세보기</button></td> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal] class add -->
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>MK12345</td>
+                                    <td>CP123456</td>
+                                    <td>박그네</td>
+                                    <td>냉장</td>
+                                    <td class="link type2"><a href="" title="주문상품페이지로 이동">무농약 간편샐러드 6종 외2건</a></td>
+                                    <td>배송중</td>
+                                    <td class="point-color04">-12˚C</td> <!-- D:온도 이탈 시 class [point-color04] add -->
+                                    <td><button type="button" class="btn_basic3 btn_modal">상세보기</button></td> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal] class add -->
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>-</td> <!-- D :송장번호가 있는 경우 주문번호 표시 안함 -->
+                                    <td>CP123456</td>
+                                    <td>전두황</td>
+                                    <td>냉동</td>
+                                    <td class="link type2"><a href="" title="주문상품페이지로 이동">무농약 간편샐러드 6종 외2건</a></td>
+                                    <td>배송중</td>
+                                    <td>-1˚C</td>
+                                    <td><button type="button" class="btn_basic3 btn_modal">상세보기</button></td> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal] class add -->
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <button type="button" class="btn_page prev">이전</button>
+                            <button type="button" class="btn_page active">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                            <button type="button" class="btn_page next">다음</button>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="modals-container" style="display: none;"><!-- modal이 없을때 <div id="modals-container">만. (하위 엘리먼트 없음)  -->
+        <div class="vm--container">
+            <div data-modal="dynamic_modal_1" aria-expanded="true" class="vm--overlay">
+                <div class="vm--top-right-slot"></div>
+            </div>
+
+            <!-- option을 통해 width(ex: 50, 50px, 50%), height(ex: 50, 50px, 50%, auto) 설정 가능 -->
+            <div aria-expanded="true" role="dialog" aria-modal="true" class="vm--modal" style="width:600px;top:12px;left:50%;margin:0 0 0 -300px"> <!-- 2020-10-12 : width값만 확인해주세요. 위치값은 퍼블확인용 -->
+                <div class="box_modal-area">
+                    <div class="box_modal_hd">배송정보</div>
+                    <div class="box_modal_cont">
+                        <div class="tit_hd-area type3">
+                            <h2 class="tit_type2">택배정보</h2>
+                        </div>
+                        <div class="bbs_area">
+                            <!-- bbs -->
+                            <table class="bbs type1">
+                                <colgroup>
+                                   <col style="width:25%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>택배사</th>
+                                    <td>자체배송</td>
+                                </tr>
+                                <tr>
+                                    <th>배송상태</th>
+                                    <td>배송완료</td>
+                                </tr>
+                                <tr>
+                                    <th>배송기사</th>
+                                    <td class="link"><a>홍길동</a></td>
+                                </tr>
+                                <tr>
+                                    <th>송장번호</th>
+                                    <td>2091544857741</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tit_hd-area type3">
+                            <h2 class="tit_type2">패키징정보</h2>
+                        </div>
+                        <div class="bbs_area">
+                            <!-- bbs -->
+                            <table class="bbs type1">
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>패키징번호</th>
+                                    <td class="link"><a>010210</a></td>
+                                </tr>
+                                <tr>
+                                    <th>최종배송온도</th>
+                                    <td>-1˚C</td>
+                                </tr>
+                                <tr>
+                                    <th>패키징상태</th>
+                                    <td>입고완료</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tit_hd-area type3">
+                            <h2 class="tit_type2">배송상세정보</h2>
+                            <button type="button" class="btn_basic4 align-r btn_map"><i class="ico_com"></i>배송지도보기</button>
+                        </div>
+                        <div class="bbs_area">
+                            <!-- table -->
+                            <table class="bbs type2">
+                                <colgroup>
+                                    <col style="width:33%">
+                                    <col style="width:auto">
+                                    <col style="width:33%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>시간</th>
+                                        <th>온도</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>배송대기</td>
+                                        <td>08.20 13:44</td>
+                                        <td>-5˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송중</td>
+                                        <td>08.20 13:44</td>
+                                        <td>-5˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송완료</td>
+                                        <td>08.20 13:44</td>
+                                        <td>-5˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송회수</td>
+                                        <td>08.20 13:44</td>
+                                        <td>-5˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>회수요청</td>
+                                        <td>08.20 13:44</td>
+                                        <td>-5˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>회수접수</td>
+                                        <td>08.20 13:44</td>
+                                        <td>-5˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <td>회수완료</td>
+                                        <td>08.20 13:44</td>
+                                        <td>-5˚C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- //table -->
+                            <!-- map -->
+                            <!-- S: 2020-10-14 html modify -->
+                            <div class="box_map-area delivery_map">
+                                <span class="item_delivery-num current" style="top:40%;left:50%"></span>
+                                <span class="item_delivery-num" style="top:30%;right:20%"></span>
+                            </div>
+                            <!-- E: 2020-10-14 html modify -->
+                            <!-- //map -->
+                        </div>
+                    </div>
+                    <!-- D: 2020-10-08 위치 변경 -->
+                    <div class="box_btn_tb">
+                        <span class="col"><button type="button" class="btn_basic3 big btn_modal-close">닫기</button></span> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal-close] add -->
+                    </div>
+                    <!-- D: 2020-10-08 위치 변경 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        $('.btn_map').click(function(){
+            $(this).parent('.tit_hd-area').toggleClass('is-active');
+        })
+    </script>
+</body>
+</html>

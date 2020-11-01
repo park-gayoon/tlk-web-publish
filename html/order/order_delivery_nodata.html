@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S :gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E :gnb Menu -->
+        <section class="layout_contents type_b">
+            <!-- S :content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E :content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">배송현황</h2>
+                    <ul class="bread_crumb">
+                        <li>주문/배송관리 &gt;</li>
+                        <li>배송현황</li>
+                    </ul>
+                </div>
+                <article class="bbs_form-content">
+                    <table class="search_table">
+                        <colgroup>
+                            <col style="width:95px">
+                            <col style="width:38%">
+                            <col style="width:95px">
+                            <col style="width:46%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>주문처</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>회사목록</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>지역</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>시</option>
+                                    </select>
+                                </span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>구</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>업무상태</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>업무중</option>
+                                        <option>업무종료</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>검색</th>
+                            <td>
+                                <div class="box_sch-area type1">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>주문번호</option>
+                                            <option>기사이름</option>
+                                            <option>차번호</option>
+                                            <option>지역명</option>
+                                        </select>
+                                    </span>
+                                    <input type="text" class="big" value="">
+                                </div>
+                                <button type="button" class="btn_basic1">조회</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <div class="delivery_wrap">
+                    <div class="delivery_result">
+                        <p class="tit_sch-result">배송 검색결과 10건</p>
+                        <div class="box_delivery-inner">
+                            <!-- S: 데이터 없을 경우 -->
+                            <p class="no-data">조회된 데이터가 없습니다.</p>
+                            <!-- E: 데이터 없을 경우 -->
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery_detail-info is-show">
+                        <div class="box_detail-hd">
+                            <p class="tit_detail-info">상세정보</p>
+                            <button type="button" class="btn_detail-close" onclick="btn_close()">닫기</button>
+                        </div>
+                        <div class="box_detail-cont">
+                            <div class="tab_type">
+                                <ul>
+                                    <li><button type="button" class="tab01 active" title="tab01">배송정보</button></li>
+                                    <li><button type="button" class="tab02" title="tab02">패키징정보</button></li>
+                                </ul>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>배송중</option>
+                                        <option>배송완료</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="tab_view-box block" id="tab01">
+                                <!-- S: 데이터 없을 경우 -->
+                                <p class="no-data">조회된 데이터가 없습니다.</p>
+                                <!-- E: 데이터 없을 경우 -->
+                            </div>
+                            <div class="tab_view-box" id="tab02">
+                                <ul class="box_detail-list">
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">주문번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">주문번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-3˚</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">주문번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">주문번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-1˚</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">주문번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">주문번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-2˚</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="box_btn-area">
+                                    <button type="button" class="btn_list-more"><i class="ico_com"></i>더보기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery_map">
+                        <div id="delivery_map">
+                            <span class="ico_num current" style="top:30%;left:50%"></span>
+                            <span class="ico_num" style="top:30%;left:20%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script>
+    $('.box_delivery-group').click(function () {
+        $('.delivery_detail-info').addClass('is-show');
+    })
+    function btn_close(){
+        $('.delivery_detail-info').removeClass('is-show');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+    <!-- 가윤과장님 확인용(vue-js-modal css) -->
+    <link rel="stylesheet" href="../../css/modal_style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">발송관리</h2>
+                    <ul class="bread_crumb">
+                        <li>PUSH관리 &gt;</li>
+                        <li>발송관리</li>
+                    </ul>
+                </div>
+                <div class="tit_hd-area">
+                    <h2 class="tit_type2">PUSH</h2>
+                </div>
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <!-- bbs -->
+                    <table class="bbs type1">
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:10%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>대상구분</th>
+                            <td>
+                                <div class="form_box">
+                                    <span class="radio">
+                                        <input type="radio" name="objectType" id="objectType1" checked>
+                                        <label for="objectType1">사용자</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="objectType" id="objectType2">
+                                        <label for="objectType2">배송기사</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="objectType" id="objectType3">
+                                        <label for="objectType3">회수기사</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="objectType" id="objectType4">
+                                        <label for="objectType4">오퍼레이터</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <th>기기구분</th>
+                            <td>
+                                <div class="form_box">
+                                    <span class="radio">
+                                        <input type="radio" name="deviceType" id="deviceType01" checked>
+                                        <label for="deviceType01">전체</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="deviceType" id="deviceType02">
+                                        <label for="deviceType02">iOS</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="deviceType" id="deviceType03">
+                                        <label for="deviceType03">Android</label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>발송구분</th>
+                            <td colspan="3">
+                                <span class="radio">
+                                    <input type="radio" name="appType" id="appType01" checked>
+                                    <label for="appType01">즉시발송</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="appType" id="appType02">
+                                    <label for="appType02">예약발송</label>
+                                </span>
+                                <div class="box_datepicker-area">
+                                    <span class="datepicker_box">
+                                        <input type="text" class="small" id="date01" name="" value="" placeholder="날짜선택" disabled="">
+                                        <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                    </span>
+                                    <i class="txt_date-line">~</i>
+                                    <span class="datepicker_box">
+                                        <input type="text" class="small" id="date02" name="" value="" placeholder="날짜선택" disabled="">
+                                        <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>수신대상</th>
+                            <td colspan="3">
+                                <div class="box_radio-group">
+                                    <span class="radio">
+                                        <input type="radio" name="appType" id="push-chk" checked>
+                                        <label for="push-chk">사용자 전체</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="appType" id="push-chk2">
+                                        <label for="push-chk2">특정회원 발송</label>
+                                    </span>
+                                </div>
+                                <!-- S: 특정회원 발송 선택시에만 노출 됩니다. -->
+                                <button type="button" class="btn_basic btn_excel align-r btn_modal"><i class="ico_com"></i>대상자 엑셀 등록</button> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal] class add -->
+                                <!-- E: 특정회원 발송 선택시에만 노출 됩니다. -->
+                                <textarea name="" cols="30" rows="5" disabled></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>제목</th>
+                            <td colspan="3">
+                                <input type="text" placeholder="게시물 제목이 들어가는 영역입니다.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>메시지</th>
+                            <td colspan="3">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <p class="txt_data-desc">iOS 최대 220Byte, Android 최대 4000Byte</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이동경로</th>
+                            <td colspan="3">
+                               <input type="text" name="">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box_btn_tb">
+                    <span class="col"><button type="button" class="btn_basic3 big">취소하기</button></span>
+                    <span class="col"><button type="button" class="btn_basic1 big">등록하기</button></span>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="modals-container" style="display: none;"><!-- modal이 없을때 <div id="modals-container">만. (하위 엘리먼트 없음)  -->
+    <div class="vm--container">
+        <div data-modal="dynamic_modal_1" aria-expanded="true" class="vm--overlay">
+            <div class="vm--top-right-slot"></div>
+        </div>
+
+        <!-- option을 통해 width(ex: 50, 50px, 50%), height(ex: 50, 50px, 50%, auto) 설정 가능 -->
+        <div aria-expanded="true" role="dialog" aria-modal="true" class="vm--modal" style="width:600px;top:50%;left:50%;margin:-127px 0 0 -300px"> <!-- 2020-10-12 : width값만 확인해주세요. top, margin값은 위치값 퍼블확인용 -->
+            <div class="box_modal-area">
+                <div class="box_modal_hd">엑셀업로드</div>
+                <div class="box_modal_cont">
+                    <div class="tit_hd-area">
+                        <h2 class="tit_type2">업로드 할 파일을 선택해주세요.</h2>
+                        <button type="button" class="btn_basic btn_excel align-r"><i class="ico_com"></i>업로드 샘플</button>
+                    </div>
+                    <div class="box_file-upload">
+                        <div class="form_box">
+                            <div class="cols">
+                                <!--input box-->
+                                <input type="text" class="upload_text big" readonly="readonly" placeholder="이미지를 등록해주세요.">
+                                <!--button-->
+                                <div class="upload-btn_wrap">
+                                    <button type="button" class="btn_basic2 fake_file">찾아보기</button>
+                                    <input type="file" class="input_file" title="파일찾기">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="txt_desc">확장자 xls, xlsx, csv첨부만 가능하며, 용량은 10M이하 첨부 가능합니다.</p>
+                    </div>
+                </div>
+                <!-- D: 2020-10-08 위치 변경 -->
+                <div class="box_btn_tb">
+                    <span class="col"><button type="button" class="btn_basic3 big btn_modal-close">취소하기</button></span> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal-close] add -->
+                    <span class="col"><button type="button" class="btn_basic1 big">저장</button></span>
+                </div>
+                <!-- D: 2020-10-08 위치 변경 -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

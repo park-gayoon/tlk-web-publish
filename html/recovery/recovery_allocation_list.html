@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+    <!-- 가윤과장님 확인용(vue-js-modal css) -->
+    <link rel="stylesheet" href="../../css/modal_style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">회수배정관리</h2>
+                    <ul class="bread_crumb">
+                        <li>회수관리 &gt;</li>
+                        <li>회수배정관리</li>
+                    </ul>
+                </div>
+                <article class="bbs_form-content">
+                    <table class="search_table">
+                        <colgroup>
+                            <col style="width:95px">
+                            <col style="width:38%">
+                            <col style="width:95px">
+                            <col style="width:46%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>회수상태</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>회수지역</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회수구분</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>기사배정</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>배정기간</th>
+                            <td>
+                                <div class="box_datepicker-area">
+                                    <span class="datepicker_box">
+                                        <input type="text" class="small" id="date01" name="" value="" placeholder="날짜선택" disabled>
+                                        <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                    </span>
+                                    <i class="txt_date-line">~</i>
+                                    <span class="datepicker_box">
+                                        <input type="text" class="small" id="date02" name="" value="" placeholder="날짜선택" disabled>
+                                        <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                    </span>
+                                </div>
+                            </td>
+                            <th>검색</th>
+                            <td>
+                                <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>패키징번호</option>
+                                                <option>맥 어드레스</option>
+                                            </select>
+                                        </span>
+                                    <input type="text" class="big" value="">
+                                </div>
+                                <button type="button" class="btn_basic1">조회</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <div class="bbs_header">
+                        <div class="bbs_list">
+                            <p class="total">회수요청 총 <span class="point-color01">145</span>건</p>
+                        </div>
+                        <div class="bbs_right">
+                            <p class="total">회수상태 : 미배정 <span class="point-color01">124</span>건
+                                <em class="txt_division-area">기사배정 <span class="point-color01">2,154</span>건</em>
+                                <em class="txt_division-area">회수매칭 <span class="point-color01">1,587</span>건</em>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- bbs -->
+                    <table class="bbs">
+                        <colgroup>
+                            <col style="width:60px">
+                            <col style="width:9%">
+                            <col style="width:9%">
+                            <col style="width:15%">
+                            <col style="width:auto">
+                            <col style="width:10%">
+                            <col style="width:12%">
+                            <col style="width:15%">
+                            <col style="width:9%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                <span class="checkbox1 no_label">
+                                    <input type="checkbox" name="" id="all">
+                                    <label for="all">전체선택</label>
+                                </span>
+                            </th>
+                            <th>패키징번호</th>
+                            <th>종류</th>
+                            <th>요청일자</th>
+                            <th>회수지역</th>
+                            <th>회수구분</th>
+                            <th>기사배정</th>
+                            <th>배정기간</th>
+                            <th>회수상태</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk01" checked="">
+                                        <label for="chk01">선택</label>
+                                    </span>
+                                </td>
+                                <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                <td>1호</td>
+                                <td>2020-08-13 19:00:24</td>
+                                <td>서울시 관악구 신림동</td>
+                                <td>-</td>
+                                <td><button class="btn_basic3 btn_modal">배정하기</button></td> <!-- D: 2020-10-08 btn_modal class add -->
+                                <td></td>
+                                <td>회수요청</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk02" checked="">
+                                        <label for="chk02">선택</label>
+                                    </span>
+                                </td>
+                                <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                <td>2호</td>
+                                <td>2020-08-13 19:00:24</td>
+                                <td>서울시 관악구 신림동</td>
+                                <td>기사배정</td>
+                                <td class="link"><a href="" title="배정기사페이지로 이동">홍길동</a></td>
+                                <td>2020-08-13 19:00:24</td>
+                                <td>회수접수</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk03" checked="">
+                                        <label for="chk03">선택</label>
+                                    </span>
+                                </td>
+                                <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                <td>3호</td>
+                                <td>2020-08-13 19:00:24</td>
+                                <td>서울시 관악구 신림동</td>
+                                <td>회수매칭</td>
+                                <td class="link"><a href="" title="배정기사페이지로 이동">김영모</a></td>
+                                <td>2020-08-13 19:00:24</td>
+                                <td>회수완료</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk04" checked="">
+                                        <label for="chk04">선택</label>
+                                    </span>
+                                </td>
+                                <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                <td>3호</td>
+                                <td>2020-08-13 19:00:24</td>
+                                <td>서울시 관악구 신림동</td>
+                                <td>회수매칭</td>
+                                <td class="link"><a href="" title="배정기사페이지로 이동">김영모</a></td>
+                                <td>2020-08-13 19:00:24</td>
+                                <td>입고완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="box_bbs-footer">
+                        <div class="align-l">
+                            <span class="txt_select-tit">배정 방식설정</span>
+                            <span class="sel">
+                                <select>
+                                    <option selected="selected">기사배정으로 일괄 변경</option>
+                                    <option>회수매칭</option>
+                                    <option>일괄변경</option>
+                                    <option>미배정 일괄변경</option>
+                                </select>
+                            </span>
+                            <button type="button" class="btn_basic1 type1">적용</button>
+                        </div>
+                        <button type="button" class="btn_basic1 align-r">선택 업무 배송기사 일괄배정</button>
+                    </div>
+                    <!-- 페이징 -->
+                    <div class="bbs_page">
+                        <button type="button" class="btn_page prev">이전</button>
+                        <button type="button" class="btn_page active">1</button>
+                        <button type="button" class="btn_page">2</button>
+                        <button type="button" class="btn_page">3</button>
+                        <button type="button" class="btn_page">4</button>
+                        <button type="button" class="btn_page">5</button>
+                        <button type="button" class="btn_page">6</button>
+                        <button type="button" class="btn_page">7</button>
+                        <button type="button" class="btn_page">8</button>
+                        <button type="button" class="btn_page">9</button>
+                        <button type="button" class="btn_page">10</button>
+                        <button type="button" class="btn_page next">다음</button>
+                    </div>
+                </div>
+                <!-- //bbs -->
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="modals-container" style="display:none;"><!-- modal이 없을때 <div id="modals-container">만. (하위 엘리먼트 없음)  -->
+    <div class="vm--container">
+        <div data-modal="dynamic_modal_1" aria-expanded="true" class="vm--overlay">
+            <div class="vm--top-right-slot"></div>
+        </div>
+
+        <!-- option을 통해 width(ex: 50, 50px, 50%), height(ex: 50, 50px, 50%, auto) 설정 가능 -->
+        <div aria-expanded="true" role="dialog" aria-modal="true" class="vm--modal" style="width:1000px;top:30px;left:50%;margin:0 0 0 -500px"> <!-- 2020-10-12 : width값만 확인해주세요. 위치값은 퍼블확인용 -->
+            <div class="box_modal-area">
+                <div class="box_modal_hd">기사배정</div>
+                <div class="box_modal_cont">
+                    <article class="bbs_form-content">
+                        <table class="search_table">
+                            <colgroup>
+                                <col style="width:92px">
+                                <col style="width:38%">
+                                <col style="width:92px">
+                                <col style="width:46%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>기사구분</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th>업무시간</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                    <i class="txt_date-line">~</i>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>회수지역</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                    <i class="txt_date-line">~</i>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th>검색</th>
+                                <td colspan="3">
+                                    <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>패키징번호</option>
+                                                <option>맥 어드레스</option>
+                                            </select>
+                                        </span>
+                                        <input type="text" class="big" value="">
+                                    </div>
+                                    <button type="button" class="btn_basic1">조회</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <!-- bbs -->
+                    <div class="bbs_area type2">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <!-- S: 2020-10-28 수정 -->
+                                <p class="total">등록기사 <span class="point-color01">1,458</span>명
+                                    (업무 ON<span class="point-color01">768</span>명,
+                                    업무 OFF<span class="point-color01">64</span>명)
+                                </p>
+                                <!-- E: 2020-10-28 수정 -->
+                            </div>
+                            <div class="bbs_right">
+                                <span class="tit_desc">업무상태</span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>배송중</option>
+                                        <option>배송완료</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:14%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:12%">
+                                <col style="width:9%">
+                                <col style="width:11%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>이름</th>
+                                    <th>아이디</th>
+                                    <th>연락처</th>
+                                    <th>지역(시)</th>
+                                    <th>지역(구)</th>
+                                    <th>업무시간</th>
+                                    <th>업무상태</th>
+                                    <th>선택</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>ON</td>
+                                    <td><button type="button" class="btn_basic9 xsmall type1">선택</button></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>OFF</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>ON</td>
+                                    <td><button type="button" class="btn_basic9 xsmall type1">선택</button></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>ON</td>
+                                    <td><button type="button" class="btn_basic9 xsmall type1">선택</button></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>OFF</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>ON</td>
+                                    <td><button type="button" class="btn_basic9 xsmall type1">선택</button></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>ON</td>
+                                    <td><button type="button" class="btn_basic9 xsmall type1">선택</button></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>OFF</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>ON</td>
+                                    <td><button type="button" class="btn_basic9 xsmall type1">선택</button></td>
+                                </tr>
+                                <tr>
+                                    <td>배송기사</td>
+                                    <td>홍길동</td>
+                                    <td>honggildong</td>
+                                    <td>2010.2103.1069</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00~20:00</td> <!-- D: 2020-10-08 btn_assign class add -->
+                                    <td>ON</td>
+                                    <td><button type="button" class="btn_basic9 xsmall type1">선택</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="bbs_page">
+                            <button type="button" class="btn_page prev">이점</button>
+                            <button type="button" class="btn_page active">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                            <button type="button" class="btn_page next">다음</button>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+
+                    <div class="box_btn_tb">
+                        <span class="col"><button type="button" class="btn_basic3 big btn_modal-close">닫기</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

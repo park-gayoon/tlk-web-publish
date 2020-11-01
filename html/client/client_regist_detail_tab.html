@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">회원관리</h2>
+                    <ul class="bread_crumb">
+                        <li>고객관리 &gt;</li>
+                        <li>회원관리</li>
+                    </ul>
+                </div>
+                <div class="tit_hd-area">
+                    <h2 class="tit_type2">회원정보</h2>
+                    <div class="align-r">
+                        <span class="txt_date">최초등록일 : 2020-08-18</span>
+                        <a href="#" class="btn_basic1">개인정보수정</a>
+                    </div>
+                </div>
+                <article class="bbs_form-content type1">
+                    <div class="item_info-list">
+                        <p class="tit_info">인적정보</p>
+                        <div class="box_info-area">
+                            <div class="box_data-group">
+                                <table>
+                                    <colgroup> <!-- 2020-10-30 colgroup 변경 -->
+                                        <col style="width:8%">
+                                        <col style="width:14%">
+                                        <col style="width:8%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tr>
+                                        <th>아이디</th>
+                                        <td>abcdefghijkl</td>
+                                        <th>이메일</th>
+                                        <td>neotoday3@nate.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>이름</th>
+                                        <td>문나연</td>
+                                        <th>주소</th>
+                                        <td>서울시 관악구 신림동 1234</td>
+                                    </tr>
+                                    <tr>
+                                        <th>생년월일</th>
+                                        <td>1992.12.16</td>
+                                        <th>마일리지</th>
+                                        <td class="link"><button class="btn_focus-tab" title="tab01">328,257</button>원</td>
+                                    </tr>
+                                    <tr>
+                                        <th>연락처</th>
+                                        <td colspan="3">010-1234-5678</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- tab -->
+                <div class="contents_box">
+                    <div class="tab_type">
+                        <ul>
+                            <li><button type="button" class="tab01 active" title="tab01">마일리지 적립/사용</button></li>
+                            <li><button type="button" class="tab02" title="tab02">주문이력</button></li>
+                        </ul>
+                    </div>
+                    <!-- S : 마일리지 적립/사용 tab -->
+                    <div class="tab_view-box block" id="tab01">
+                        <div class="bbs_area">
+                            <div class="bbs_header">
+                                <div class="bbs_list">
+                                    <p class="total"><strong>전체이력 :</strong> 마일리지적립 <span class="point-color01">6</span>건
+                                        <em class="txt_division-area">사용 <span class="point-color01">1</span>건</em>
+                                    </p>
+                                </div>
+                                <div class="bbs_right">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>적립</option>
+                                            <option>사용</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- bbs -->
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:10%">
+                                    <col style="width:11%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:11%">
+                                    <col style="width:23%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>NO</th>
+                                    <th>구분</th>
+                                    <th>증감(+)</th>
+                                    <th>차감(-)</th>
+                                    <th>잔액</th>
+                                    <th>비고(사유)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>123</td>
+                                    <td>적립</td>
+                                    <td class="point-color02">+900</td>
+                                    <td></td>
+                                    <td>14,700</td>
+                                    <td>회수요청</td>
+                                </tr>
+                                <tr>
+                                    <td>123</td>
+                                    <td>사용</td>
+                                    <td></td>
+                                    <td class="point-color05">-500</td>
+                                    <td>14,700</td>
+                                    <td>포인트사용</td>
+                                </tr>
+                                <tr>
+                                    <td>123</td>
+                                    <td>적립</td>
+                                    <td class="point-color02">+900</td>
+                                    <td></td>
+                                    <td>14,700</td>
+                                    <td>회수요청</td>
+                                </tr>
+                                <tr>
+                                    <td>123</td>
+                                    <td>사용</td>
+                                    <td></td>
+                                    <td class="point-color05">-500</td>
+                                    <td>14,700</td>
+                                    <td>포인트사용</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page">6</button>
+                                <button type="button" class="btn_page">7</button>
+                                <button type="button" class="btn_page">8</button>
+                                <button type="button" class="btn_page">9</button>
+                                <button type="button" class="btn_page">10</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E : 마일리지 적립/사용 tab -->
+                    <!-- S : 주문이력 tab -->
+                    <div class="tab_view-box" id="tab02">
+                        <div class="bbs_area">
+                            <div class="bbs_header">
+                                <div class="bbs_list">
+                                    <p class="total"><strong>전체이력 :</strong> 배송대기 <span class="point-color01">6</span>건
+                                        <em class="txt_division-area">배송출발 <span class="point-color01">4</span>건</em>
+                                        <em class="txt_division-area">배송중 <span class="point-color01">1</span>건</em>
+                                        <em class="txt_division-area">배송완료 <span class="point-color01">1</span>건</em>
+                                    </p>
+                                </div>
+                                <div class="bbs_right">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>배송대기</option>
+                                            <option>배송출발</option>
+                                            <option>배송중</option>
+                                            <option>배송완료</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- bbs -->
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:10%">
+                                    <col style="width:11%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:23%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>주문처</th>
+                                    <th>주문일시</th>
+                                    <th>주문번호</th>
+                                    <th>고객명</th>
+                                    <th>주문상품</th>
+                                    <th>배송상태</th>
+                                    <th>완료온도</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>MK12345</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>[LOTS OF LOVE] 차돌 듬뿍 묵은지 볶음밥 외 6건은 한번에 먹을 수 있지요</a></td>
+                                    <td>배송중</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>쿠팡띠</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>MK12345</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>지베가고시퍼효~ 지베가지마 baby</a></td>
+                                    <td>배송완료</td>
+                                    <td>-1℃</td>
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>MK12345</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>깁스는 언제쯤 푸르까? 힝구띠>_<</a></td>
+                                    <td>배송중</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>쿠팡띠</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>MK12345</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>지베가고시퍼효~ 지베가지마 baby</a></td>
+                                    <td>배송완료</td>
+                                    <td>-1℃</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page">6</button>
+                                <button type="button" class="btn_page">7</button>
+                                <button type="button" class="btn_page">8</button>
+                                <button type="button" class="btn_page">9</button>
+                                <button type="button" class="btn_page">10</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E : 주문이력 tab -->
+                </div>
+                <!-- //tab -->
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">기사등록조회</h2>
+                    <ul class="bread_crumb">
+                        <li>기사관리 &gt;</li>
+                        <li>기사등록조회</li>
+                    </ul>
+                </div>
+                <article class="bbs_form-content">
+                    <table class="search_table">
+                        <colgroup>
+                            <col style="width:97px">
+                            <col style="width:36%">
+                            <col style="width:97px">
+                            <col style="width:46%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>기사구분</th>
+                            <td>
+                                 <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>배송</option>
+                                        <option>회수</option>
+                                        <option>배송+회수</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>지역</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>차량종류</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>업무시간</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                                <i class="txt_date-line">~</i>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>업무상태</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>검색</th>
+                            <td>
+                                <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>기사이름</option>
+                                            </select>
+                                        </span>
+                                    <input type="text" class="big" value="">
+                                </div>
+                                <button type="button" class="btn_basic1">조회</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <div class="bbs_header">
+                        <div class="bbs_list">
+                            <p class="total">배송 <span class="point-color01">12,345</span>명 (배송기사 <span class="point-color01">45</span>명
+                                <em class="txt_division-area">회수 <span class="point-color01">245</span>명</em>
+                                <em class="txt_division-area">배송+회수 <span class="point-color01">1,235</span>명</em>)
+                            </p>
+                        </div>
+                        <div class="bbs_right">
+                            <button type="button" class="btn_basic3 type1"><span class="ico_plus"></span>기사 등록하기</button>
+                        </div>
+                    </div>
+
+                    <!-- bbs -->
+                    <table class="bbs">
+                        <colgroup>
+                            <col style="width:9%">
+                            <col style="width:9%">
+                            <col style="width:12%">
+                            <col style="width:12%">
+                            <col style="width:12%">
+                            <col style="width:8%">
+                            <col style="width:8%">
+                            <col style="width:9%">
+                            <col style="width:12%">
+                            <col style="width:8%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>이름</th>
+                            <th>아이디</th>
+                            <th>소속</th>
+                            <th>연락처</th>
+                            <th>차량종류</th>
+                            <th>지역(시)</th>
+                            <th>지역(구)</th>
+                            <th>업무시간</th>
+                            <th>업무상태</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>배송기사</td>
+                                <td class="link"><a href="" title="배송기사페이지로 이동">박지선</a></td>
+                                <td>neotoday3</td>
+                                <td>써모랩코리아</td>
+                                <td>010-2985-4636</td>
+                                <td>오토바이</td>
+                                <td>서울시</td>
+                                <td>관악구</td>
+                                <td>18:00 ~ 20:00</td>
+                                <td>ON</td>
+                            </tr>
+                            <tr>
+                                <td>배송기사</td>
+                                <td class="link"><a href="" title="배송기사페이지로 이동">박지선</a></td>
+                                <td>neotoday3</td>
+                                <td>써모랩코리아</td>
+                                <td>010-2985-4636</td>
+                                <td>자가용</td>
+                                <td>서울시</td>
+                                <td>은평구</td>
+                                <td>18:00 ~ 20:00</td>
+                                <td>OFF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 페이징 -->
+                    <div class="bbs_page">
+                        <button type="button" class="btn_page prev">이전</button>
+                        <button type="button" class="btn_page active">1</button>
+                        <button type="button" class="btn_page">2</button>
+                        <button type="button" class="btn_page">3</button>
+                        <button type="button" class="btn_page">4</button>
+                        <button type="button" class="btn_page">5</button>
+                        <button type="button" class="btn_page">6</button>
+                        <button type="button" class="btn_page">7</button>
+                        <button type="button" class="btn_page">8</button>
+                        <button type="button" class="btn_page">9</button>
+                        <button type="button" class="btn_page">10</button>
+                        <button type="button" class="btn_page next">다음</button>
+                    </div>
+                </div>
+                <!-- //bbs -->
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

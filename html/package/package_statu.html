@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="layout_wrap">
+            <!-- S : gnb Menu -->
+            <script src="../include/gnb_menu.js"></script>
+            <!-- E : gnb Menu -->
+            <section class="layout_contents">
+                <!-- S : content header -->
+                <script src="../include/content_hd.js"></script>
+                <!-- E : content header -->
+                <div class="layout_contents-inner">
+                    <div class="box_bread_crumb">
+                        <h2 class="tit_type1">상태변경이력</h2>
+                        <ul class="bread_crumb">
+                            <li>패키징관리 &gt;</li>
+                            <li>상태변경이력</li>
+                        </ul>
+                    </div>
+                    <article class="bbs_form-content">
+                        <table class="search_table">
+                            <colgroup>
+                                <col style="width:95px">
+                                <col style="width:40%">
+                                <col style="width:95px">
+                                <col style="width:47%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>상태구분</th>
+                                <td colspan="3">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>정상처리</option>
+                                            <option>불량처리</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>기간</th>
+                                <td>
+                                    <div class="box_datepicker-area">
+                                        <span class="datepicker_box">
+                                            <input type="text" class="small" id="date01" name="" value="" placeholder="날짜선택" disabled>
+                                            <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                        </span>
+                                        <i class="txt_date-line">~</i>
+                                        <span class="datepicker_box">
+                                            <input type="text" class="small" id="date02" name="" value="" placeholder="날짜선택" disabled>
+                                            <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                        </span>
+                                    </div>
+                                </td>
+                                <th>검색</th>
+                                <td>
+                                    <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>패키징번호</option>
+                                                <option>오퍼레이터명</option>
+                                            </select>
+                                        </span>
+                                        <input type="text" class="big" value="">
+                                    </div>
+                                    <button type="button" class="btn_basic1">조회</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="total">상태변경 총 <span class="point-color01">12,345</span>건 (정상처리 <span class="point-color01">8,345</span>
+                                    <em class="txt_division-area">불량처리 <span class="point-color01">245</span></em>)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <colgroup>
+                                <col style="width:20%">
+                                <col style="width:13%">
+                                <col style="width:20%">
+                                <col style="width:13%">
+                                <col style="width:auto">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>날짜</th>
+                                <th>패키징번호</th>
+                                <th>오퍼레이터</th>
+                                <th>상태구분</th>
+                                <th>사유</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2020-08-13 19:00</td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">CP123456</a></td>
+                                    <td>박지선 (honggildong)</td>
+                                    <td>정상처리</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2020-08-13 19:00</td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">CP123456</a></td>
+                                    <td>박지선 (honggildong)</td>
+                                    <td>불량처리</td>
+                                    <td>온도센서이상, EPD파손</td>
+                                </tr>
+                                <tr>
+                                    <td>2020-08-13 19:00</td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">CP123456</a></td>
+                                    <td>박지선 (honggildong)</td>
+                                    <td>정상처리</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2020-08-13 19:00</td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">CP123456</a></td>
+                                    <td>박지선 (honggildong)</td>
+                                    <td>불량처리</td>
+                                    <td>조도센서이상</td>
+                                </tr>
+                                <tr>
+                                    <td>2020-08-13 19:00</td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">CP123456</a></td>
+                                    <td>박지선 (honggildong)</td>
+                                    <td>불량처리</td>
+                                    <td>배터리 이상, 박스 파손, 온도센서 이상</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="box_bbs-footer">
+                            <!-- 버튼 영역 -->
+                            <button type="button" class="btn_basic btn_excel align-r"><i class="ico_com"></i>엑셀 다운로드</button>
+                        </div>
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <button type="button" class="btn_page prev">이전</button>
+                            <button type="button" class="btn_page active">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                            <button type="button" class="btn_page next">다음</button>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</body>
+</html>
